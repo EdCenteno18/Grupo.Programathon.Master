@@ -54,23 +54,29 @@ class RegisterController extends Controller
         $rules = array(
             'cedula' => array(
                 'required',
-                'min:8'
+                'numeric',
+                'regex:/^[\s\_-]+$/u'
             ),
             'name' => array(
                 'required',
-                'min:8'
-            ),
-            'email' => array(
-                'required',
-                'min:8',
-                 'string',
-                 'email',
-                 'max:255',
-                 'unique:users'
+                'min:2',
+                'max:35'
             ),
             'telefono' => array(
                 'required',
-                'min:8'
+                'min:8',
+                'max:8',
+                ///'numeric',
+                //'alpha_dash'
+            ),
+            'email' => array(
+                'required',
+                'min:7',
+                 'string',
+                 'email',
+                 'max:255',
+                 'unique:users',
+                 'max:256'
             ),
             'password' => array(
                 'required',

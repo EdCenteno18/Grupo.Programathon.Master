@@ -11,11 +11,12 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="form-group row">
+                        <label for="">*</label>
                             <label for="cedula" class="col-md-4 col-form-label text-md-right">{{ __('Cedula') }}</label>
 
                             <div class="col-md-6">
                                 <input id="cedula" type="text" class="form-control{{ $errors->has('cedula') ? ' is-invalid' : '' }}"
-                                name="cedula" value="{{ old('cedula') }}" required autofocus>
+                                name="cedula" value="{{ old('cedula') }}" required autofocus placeholder="No digite Guiones ni espacios en blanco">
 
                                 @if ($errors->has('telefono'))
                                     <span class="invalid-feedback">
@@ -25,6 +26,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                        <label for="">*</label>
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
 
                             <div class="col-md-6">
@@ -39,6 +41,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                        <label for="">*</label>
                             <label for="telefono" class="col-md-4 col-form-label text-md-right">{{ __('Teléfono') }}</label>
 
                             <div class="col-md-6">
@@ -54,6 +57,7 @@
                         </div>
 
                         <div class="form-group row">
+                        <label for="">*</label>
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Correo') }}</label>
 
                             <div class="col-md-6">
@@ -68,6 +72,7 @@
                         </div>
 
                         <div class="form-group row">
+                        <label for="">*</label>
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Clave') }}</label>
 
                             <div class="col-md-6">
@@ -83,6 +88,7 @@
                         </div>
 
                         <div class="form-group row">
+                        <label for="">*</label>
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Clave') }}</label>
 
                             <div class="col-md-6">
